@@ -12,8 +12,7 @@ A web-based color search application that allows users to search and explore col
 
 ## Live Demo
 
-Visit the live application at: `https://<username>.github.io/ColorSearcher/`
-(Replace `<username>` with your GitHub username once deployed)
+Visit the live application at: `https://borisgal25.github.io/ColorSearcher/`
 
 ## Local Development
 
