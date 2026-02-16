@@ -72,11 +72,14 @@ searchInput.addEventListener('input', (e) => {
 async function loadColors() {
     try {
         const response = await fetch('colors.php');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         colors = await response.json();
         displayColors(colors);
     } catch (error) {
         console.error('Error loading colors:', error);
-        colorGrid.innerHTML = '<div class="no-results">Error loading colors. Please make sure colors.php is accessible.</div>';
+        colorGrid.innerHTML = `<div class="no-results">Error loading colors: ${error.message}. Please make sure colors.php is accessible and your PHP server is running.</div>`;
     }
 }
 

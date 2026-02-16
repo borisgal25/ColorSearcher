@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
+// CORS header removed - this file is served from the same domain
 
 // Comprehensive color database with keywords for easy searching
 // Each color has: name, hex code, RGB values, and searchable keywords
