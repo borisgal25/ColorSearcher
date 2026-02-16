@@ -152,4 +152,3 @@ $colors = [
 
 // Output the colors as JSON
 echo json_encode($colors);
-?>
