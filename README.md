@@ -4,11 +4,31 @@ A web-based color search application that allows users to search and explore col
 
 ## Features
 
-- 🎨 Search through 100+ common colors by name, hex code, or RGB values
+- 🎨 Search through an extensive color database by name, hex code, RGB values, or keywords
 - 🔍 Real-time filtering as you type
+- 🏷️ Keyword-based search (e.g., search "ocean", "bright", "pastel" to find related colors)
 - 🖱️ Hover over color tiles to view detailed information (hex and RGB codes)
 - 📱 Responsive grid layout that adapts to different screen sizes
 - 🎭 Dark theme with elegant gold accents
+- ⚙️ Easy customization via PHP color database
+
+## Customizing Colors
+
+Colors are defined in `colors.php` with the following structure:
+
+```php
+["name" => "Color Name", "hex" => "#HEXCODE", "rgb" => "R, G, B", "keywords" => ["keyword1", "keyword2", ...]]
+```
+
+To add or modify colors:
+1. Open `colors.php`
+2. Add/edit entries in the `$colors` array
+3. Save the file - changes will be reflected immediately
+
+Example:
+```php
+["name" => "Ocean Blue", "hex" => "#0077BE", "rgb" => "0, 119, 190", "keywords" => ["ocean", "water", "sea", "deep", "tropical"]]
+```
 
 ## Live Demo
 
@@ -16,7 +36,12 @@ Visit the live application at: `https://borisgal25.github.io/ColorSearcher/`
 
 ## Local Development
 
-Simply open `index.html` in your web browser to run the application locally.
+To run the application locally:
+1. You need a local PHP server (e.g., Apache, Nginx, or PHP's built-in server)
+2. Run `php -S localhost:8000` in the project directory
+3. Open `http://localhost:8000` in your web browser
+
+Alternatively, you can use any local web server that supports PHP.
 
 ## GitHub Pages Deployment
 
